@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqg2l45eaxt8o"]
+
+[ext_resource type="PackedScene" uid="uid://brt4jwjepii5e" path="res://ents/char.tscn" id="1_qi2sl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi2sl"]
+size = Vector2(105, 87)
+
+[node name="ExampleLevel" type="Node2D"]
+
+[node name="Char" parent="." instance=ExtResource("1_qi2sl")]
+position = Vector2(552, 260)
+
+[node name="cosa" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cosa"]
+position = Vector2(890, 113)
+shape = SubResource("RectangleShape2D_qi2sl")
+
+[node name="cosa2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cosa2"]
+position = Vector2(922, 432)
+shape = SubResource("RectangleShape2D_qi2sl")
